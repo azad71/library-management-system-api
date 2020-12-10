@@ -4,6 +4,8 @@ const formidable = require('express-formidable');
 const mongoose = require("mongoose");
 const passport = require("passport");
 const path = require('path');
+const cors = require('cors');
+const compression = require('compression');
 
 
 
@@ -34,6 +36,8 @@ app.use(formidable({ multiples: true })); // for parsing file and formData
 app.use(passport.initialize()); // auth config for jwt
 require("./config/auth")(passport); // ...
 app.use(express.static(__dirname + "/images")); // for saving images on app directory
+app.use(cors()); // enable all sources
+app.use(compression()) // for compressing response
 
 // set public directory for uploading images
 app.use((req, res, next) => {
