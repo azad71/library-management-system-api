@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library Management System</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
 
-  <style>
+    <style>
+      .container {
+        width: 80%;
+        text-align: left;
+        margin: 0 auto;
+      }
 
-    .container {
-      width: 80%;
-      text-align: center;
-      margin: 0 auto;
-    }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        margin: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Library Management System</h1>
+      <h2>List of available apis</h2>
+      <ul>
+        <li>
+          https://library-management-system-api.herokuapp.com/api/auth/register
+        </li>
 
-    h1 {
-      text-align: center;
-      font-size: 40px;
-      margin: 30px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to Library Management System</h1>
-    <h2>List of available apis</h2>
-    <!-- <ul>
-      <li>
-        <a href=""></a>
-      </li>
-    </ul> -->
-  </div>
- 
-</body>
+        <li>
+          https://library-management-system-api.herokuapp.com/api/auth/login
+        </li>
+
+        <li>
+          https://library-management-system-api.herokuapp.com/api/book/add
+        </li>
+
+        <li>
+          https://library-management-system-api.herokuapp.com/api/book/update/:bookId
+        </li>
+
+        <li>
+          https://library-management-system-api.herokuapp.com/api/book/delete/:bookId
+        </li>
+
+        <li>
+          https://library-management-system-api.herokuapp.com/api/book/:bookId
+        </li>
+
+        <li>
+          https://library-management-system-api.herokuapp.com/api/book
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
