@@ -51,7 +51,10 @@ exports.postAddBookRecord = async (req, res) => {
 
     await newBookRecord.save();
     
-    res.json({message: "Book added successfully"})
+    res.json({ 
+      message: "Book added successfully",
+      addedBook: newBookRecord
+    })
   } catch (error) {
     console.log(error);
     return res.status(500).json({error: error.message});
